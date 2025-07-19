@@ -1,59 +1,50 @@
 import streamlit as st
-from chains import get_specific_temple_info, get_temples_by_location, get_temples_by_dynasty
-from PIL import Image
-import requests
-from io import BytesIO
+from chains import (
+    get_specific_temple_info,
+    get_all_locations, get_temples_by_location,
+    get_all_eras, get_temples_by_era,
+    get_all_deities, get_temples_by_deity
+)
 
 st.set_page_config(page_title="TempleGPT 🛕", page_icon="🛕", layout="wide")
-
 st.title("TempleGPT 🛕")
 st.markdown("Ask about Tamil Nadu temples: architecture, builders, mythology, and more.")
 
-# Sidebar - Location and Dynasty Filters
+# Sidebar: Filters
 st.sidebar.header("📍 Temple Assessment")
 
-# Get temple data from both helper functions
-all_temples_by_location = get_temples_by_location()
-all_temples_by_dynasty = get_temples_by_dynasty()
+# Location filter
+location = st.sidebar.selectbox("Temple Location", ["Select"] + get_all_locations())
+if location != "Select":
+    st.sidebar.subheader("Temples at this Location")
+    for temple in get_temples_by_location(location):
+        st.sidebar.markdown(f"- {temple}")
 
-# Extract unique values
-unique_locations = sorted(list(set([t.get('location', 'Unknown') for t in all_temples_by_location])))
-unique_dynasties = sorted(list(set([t.get('era', 'Unknown') for t in all_temples_by_dynasty])))
+# Era filter
+era = st.sidebar.selectbox("Built Dynasty / Era", ["Select"] + get_all_eras())
+if era != "Select":
+    st.sidebar.subheader("Temples from this Era")
+    for temple in get_temples_by_era(era):
+        st.sidebar.markdown(f"- {temple}")
 
-# Dropdowns
-selected_location = st.sidebar.selectbox("Temple Location", unique_locations)
-selected_dynasty = st.sidebar.selectbox("Built Dynasty (Era)", unique_dynasties)
+# Deity filter
+deity = st.sidebar.selectbox("Deity", ["Select"] + get_all_deities())
+if deity != "Select":
+    st.sidebar.subheader("Temples for this Deity")
+    for temple in get_temples_by_deity(deity):
+        st.sidebar.markdown(f"- {temple}")
 
-# Show temples matching location
-st.sidebar.markdown("---")
-st.sidebar.subheader("Temples in this Location")
-for temple in all_temples_by_location:
-    if temple.get("location") == selected_location:
-        st.sidebar.write(f"- {temple['temple_name']}")
-
-# Show temples matching dynasty (era)
-st.sidebar.markdown("---")
-st.sidebar.subheader("Temples from this Dynasty")
-for temple in all_temples_by_dynasty:
-    if temple.get("era") == selected_dynasty:
-        st.sidebar.write(f"- {temple['temple_name']}")
-
-# Main Query Interface
-query = st.text_input("Ask your question")
+# Query interface
+st.markdown("---")
+query = st.text_input("Ask your question about a temple")
 
 if st.button("Ask TempleGPT"):
     if query.strip():
         with st.spinner("TempleGPT is thinking..."):
-            response = get_specific_temple_info(query)
-
-        if response.get("answer"):
-            st.success("TempleGPT says:")
-            st.write(response["answer"])
-
-            # Show image if available
-            if response.get("image_url"):
-                st.image(response["image_url"], caption="AI-generated image", use_column_width=True)
-        else:
-            st.error("Sorry, no matching temple found.")
+            result = get_specific_temple_info(query)
+        st.success("TempleGPT says:")
+        st.write(result["answer"])
+        if result.get("image_url"):
+            st.image(result["image_url"], caption="AI-generated image", use_column_width=True)
     else:
         st.warning("Please enter a question.")
