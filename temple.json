@@ -143,32 +143,7 @@
     },
     "image_prompt": "Tiruvarur Thyagaraja Temple with majestic chariot, ancient granite structures, and vibrant festival crowd"
   },
-  {
-    "temple_name": "Meenakshi Amman Temple",
-    "location": "Madurai, Tamil Nadu",
-    "deity": "Goddess Meenakshi and Lord Sundareswarar",
-    "mythology": "Parvati incarnated as Meenakshi and married Shiva in Madurai. The celestial wedding is celebrated as Chithirai Thiruvizha.",
-    "architecture": {
-      "style": "Dravidian",
-      "era": "Pandya and Nayak",
-      "materials": "Granite, sandstone",
-      "features": "12 gopurams, Hall of 1000 pillars, large temple tank"
-    },
-    "image_prompt": "Aerial view of Meenakshi Amman Temple, brightly colored gopurams, night lights, temple pond in center"
-  },
-  {
-    "temple_name": "Annamalaiyar Temple",
-    "location": "Tiruvannamalai, Tamil Nadu",
-    "deity": "Lord Shiva (Annamalaiyar)",
-    "mythology": "Represents the fire (Agni) element of Pancha Bhoota. The hill itself is considered Shiva. Karthigai Deepam is the major festival here.",
-    "architecture": {
-      "style": "Dravidian",
-      "era": "Chola, Vijayanagara",
-      "materials": "Granite",
-      "features": "Four gopurams, tallest Eastern gopuram, sacred circumambulation path around the hill"
-    },
-    "image_prompt": "Night view of Annamalaiyar Temple with giant flame atop Arunachala hill, festival lights, and crowd"
-  },
+ 
   {
     "temple_name": "Srivilliputhur Andal Temple",
     "location": "Srivilliputhur, Tamil Nadu",
@@ -182,19 +157,7 @@
     },
     "image_prompt": "Srivilliputhur Andal Temple with gopuram as seen in TN state emblem, temple courtyard and flower decorations"
   },
-  {
-    "temple_name": "Thillai Nataraja Temple",
-    "location": "Chidambaram, Tamil Nadu",
-    "deity": "Lord Shiva (Nataraja - Cosmic Dancer)",
-    "mythology": "Nataraja performed the Ananda Tandava (Dance of Bliss) defeating the ego of other celestial dancers. Represents space (Akasha).",
-    "architecture": {
-      "style": "Chola and Pandya",
-      "era": "9th century onwards",
-      "materials": "Granite",
-      "features": "Golden roof over sanctum, Chit Sabha, Akasha Linga (invisible Shiva), 108 Bharatanatyam postures"
-    },
-    "image_prompt": "Thillai Nataraja Temple inner sanctum with golden roof, Nataraja idol in dancing pose, dancers performing in front"
-  },
+
   {
     "temple_name": "Swamimalai Murugan Temple",
     "location": "Swamimalai, Tamil Nadu",
@@ -261,19 +224,7 @@
     "image_prompt": "Hilltop view of Palani Murugan Temple with stairs, winch car, and large crowds during Thaipusam"
   }
 ,
-  {
-    "temple_name": "Thyagaraja Temple",
-    "location": "Tiruvarur, Tamil Nadu",
-    "deity": "Lord Shiva (Thyagaraja)",
-    "mythology": "The temple is believed to be the place where Lord Vishnu gifted the Thyagaraja idol to Shiva. It is famous for the dance of Thyagaraja.",
-    "architecture": {
-      "style": "Dravidian",
-      "era": "Chola dynasty",
-      "materials": "Granite",
-      "features": "Massive chariot, large temple tank, numerous shrines within vast premises"
-    },
-    "image_prompt": "Tiruvarur Thyagaraja Temple with huge wooden chariot, detailed carvings, surrounded by water tank and greenery"
-  },
+  
   {
     "temple_name": "Thillai Kali Amman Temple",
     "location": "Chidambaram, Tamil Nadu",
@@ -300,19 +251,7 @@
     },
     "image_prompt": "Vadapalani Murugan Temple gopuram with vivid Murugan statues, bright colors, and bustling devotees"
   },
-  {
-    "temple_name": "Annamalaiyar Temple",
-    "location": "Tiruvannamalai, Tamil Nadu",
-    "deity": "Lord Shiva (Annamalaiyar)",
-    "mythology": "Shiva manifested as fire on Arunachala Hill. The temple marks the center of the Karthigai Deepam festival.",
-    "architecture": {
-      "style": "Dravidian",
-      "era": "Chola to Vijayanagara",
-      "materials": "Granite",
-      "features": "Tall gopurams, Deepam cauldron on hilltop, circumambulation path"
-    },
-    "image_prompt": "Annamalaiyar Temple at dusk with illuminated gopuram and fire on Arunachala hill in background"
-  },
+  
   {
     "temple_name": "Srivilliputhur Andal Temple",
     "location": "Srivilliputhur, Tamil Nadu",
@@ -326,19 +265,7 @@
     },
     "image_prompt": "Srivilliputhur Temple tower with Tamil Nadu emblem resemblance, blue sky, flower-laden entrance"
   },
-  {
-    "temple_name": "Kumbeswarar Temple",
-    "location": "Kumbakonam, Tamil Nadu",
-    "deity": "Lord Shiva (Kumbeswarar)",
-    "mythology": "Shiva is believed to have formed from the sacred pot (Kumbha) during the cosmic deluge.",
-    "architecture": {
-      "style": "Chola and Nayak",
-      "era": "7th century CE",
-      "materials": "Granite",
-      "features": "Five-tier gopuram, Mahamaham tank nearby, intricate sculptures"
-    },
-    "image_prompt": "Kumbeswarar Temple gopuram with pilgrims, stone corridors, and tankside lamps"
-  },
+  
   {
     "temple_name": "Vaitheeswaran Koil",
     "location": "Mayiladuthurai, Tamil Nadu",
@@ -365,19 +292,7 @@
     },
     "image_prompt": "Swamimalai Temple on hill with staircase, lamps on steps, devotees climbing at dawn"
   },
-  {
-    "temple_name": "Chidambaram Nataraja Temple",
-    "location": "Chidambaram, Tamil Nadu",
-    "deity": "Lord Shiva (Nataraja)",
-    "mythology": "Symbolizes the cosmic dance of Lord Shiva. Site of Chidambara Rahasya – the formless space deity.",
-    "architecture": {
-      "style": "Dravidian",
-      "era": "Chola and Pandya",
-      "materials": "Granite",
-      "features": "Golden roof over sanctum, Nataraja idol, cosmic dance postures"
-    },
-    "image_prompt": "Golden-roofed sanctum of Chidambaram Temple, Nataraja sculpture, mystic ambience"
-  },
+ 
   {
     "temple_name": "Rockfort Ucchi Pillayar Temple",
     "location": "Tiruchirappalli, Tamil Nadu",
