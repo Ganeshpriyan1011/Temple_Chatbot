@@ -1,7 +1,7 @@
 import json
 
 # Load temple dataset
-with open("temples.json", "r", encoding="utf-8") as file:
+with open("temple.json", "r", encoding="utf-8") as file:
     temple_data = json.load(file)
 
 # 📌 Temple Q&A
