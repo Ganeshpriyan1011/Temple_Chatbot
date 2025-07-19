@@ -1,19 +1,21 @@
-import os
 import json
-import numpy as np
+import os
 from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 
 def load_vectorstore():
+    with open("temple.json", "r", encoding="utf-8") as f:
+        temple_data = json.load(f)
+
     model = SentenceTransformer('all-MiniLM-L6-v2')
-    data = []
-    embeddings = []
 
-    for filename in os.listdir("temples"):
-        if filename.endswith(".json"):
-            with open(os.path.join("temples", filename), "r", encoding="utf-8") as f:
-                temple = json.load(f)
-                content = f"{temple['name']} {temple['mythology']} {temple['architecture']}"
-                data.append(temple)
-                embeddings.append(model.encode(content))
+    texts = []
+    metadata = []
 
-    return data, np.array(embeddings), model
+    for temple in temple_data:
+        content = f"{temple['name']} located at {temple['location']}. Mythology: {temple['mythology']}. Architecture: {temple['architecture']}"
+        texts.append(content)
+        metadata.append(temple)
+
+    embeddings = model.encode(texts)
+    return metadata, embeddings, model
