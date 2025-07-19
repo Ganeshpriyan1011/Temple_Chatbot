@@ -1,45 +1,40 @@
 import json
 
-# Load the temple JSON dataset
-with open("temple.json", "r", encoding="utf-8") as file:
+# Load JSON data once
+with open("temples.json", "r", encoding="utf-8") as file:
     temple_data = json.load(file)
 
-# Add image URL dynamically if not already present
-def add_image_url(temple):
-    if "image_url" not in temple or not temple["image_url"]:
-        temple["image_url"] = f"https://source.unsplash.com/600x400/?{temple['temple_name'].replace(' ', '+')}+temple"
-    return temple
-
-# Prompt-based search
-def get_specific_temple_info(question):
+# Get info by question-based query (simplified)
+def get_specific_temple_info(query):
     for temple in temple_data:
-        if temple['temple_name'].lower() in question.lower():
-            return add_image_url(temple)
+        if temple["temple_name"].lower() in query.lower():
+            return {
+                "temple_name": temple["temple_name"],
+                "location": temple["location"],
+                "deity": temple["deity"],
+                "mythology": temple["mythology"],
+                "architecture": temple["architecture"],
+                "image_url": f"https://source.unsplash.com/600x400/?{temple['temple_name'].replace(' ', '+')}+temple"
+            }
     return None
 
-# Location-based
 def get_temples_by_location():
-    location_dict = {}
+    result = {}
     for temple in temple_data:
-        location = temple['location']
-        temple = add_image_url(temple)
-        location_dict.setdefault(location, []).append(temple)
-    return location_dict
+        loc = temple["location"]
+        result.setdefault(loc, []).append(temple)
+    return result
 
-# Era-based
 def get_temples_by_era():
-    era_dict = {}
+    result = {}
     for temple in temple_data:
-        era = temple['architecture'].get('era', 'Unknown')
-        temple = add_image_url(temple)
-        era_dict.setdefault(era, []).append(temple)
-    return era_dict
+        era = temple["architecture"].get("era", "Unknown")
+        result.setdefault(era, []).append(temple)
+    return result
 
-# Deity-based
 def get_temples_by_deity():
-    deity_dict = {}
+    result = {}
     for temple in temple_data:
-        deity = temple['deity']
-        temple = add_image_url(temple)
-        deity_dict.setdefault(deity, []).append(temple)
-    return deity_dict
+        deity = temple["deity"]
+        result.setdefault(deity, []).append(temple)
+    return result
