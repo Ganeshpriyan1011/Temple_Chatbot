@@ -1,0 +1,394 @@
+[
+  {
+    "temple_name": "Brihadeeswarar Temple",
+    "location": "Thanjavur, Tamil Nadu",
+    "deity": "Lord Shiva (Brihadeeswarar)",
+    "mythology": "Built by Raja Raja Chola I to show his devotion to Shiva and his power. The lingam inside represents infinite energy.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola",
+      "materials": "Granite",
+      "features": "Tall vimana (tower), massive Nandi, intricate sculptures"
+    },
+    "image_prompt": "A majestic view of Brihadeeswarar Temple with towering vimana under golden sunset, ancient Chola sculptures"
+  },
+  {
+    "temple_name": "Meenakshi Amman Temple",
+    "location": "Madurai, Tamil Nadu",
+    "deity": "Goddess Meenakshi (Parvati) and Lord Sundareswarar (Shiva)",
+    "mythology": "Goddess Meenakshi, born from fire, ruled Madurai and married Lord Shiva in a celestial wedding celebrated even today.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pandya and Nayak",
+      "materials": "Granite and limestone",
+      "features": "14 gopurams (gateway towers), hall of thousand pillars, colorful sculptures"
+    },
+    "image_prompt": "Vibrant aerial view of Meenakshi Temple with gopurams full of colorful statues, bustling temple complex"
+  },
+  {
+    "temple_name": "Ramanathaswamy Temple",
+    "location": "Rameswaram, Tamil Nadu",
+    "deity": "Lord Shiva (Ramanathaswamy)",
+    "mythology": "Lord Rama worshipped Shiva here to absolve the sin of killing Ravana. Built at the site where Shiva lingam was installed.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pandya and Nayak",
+      "materials": "Granite",
+      "features": "Longest temple corridor in the world, 22 theerthams (holy wells)"
+    },
+    "image_prompt": "Long symmetrical view of Ramanathaswamy Temple corridor with carved pillars in morning light"
+  },
+  {
+    "temple_name": "Chidambaram Nataraja Temple",
+    "location": "Chidambaram, Tamil Nadu",
+    "deity": "Lord Shiva (as Nataraja – cosmic dancer)",
+    "mythology": "Shiva performed his cosmic dance (Ananda Tandava) here before sages. The temple also represents space (Akasha) element.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola dynasty",
+      "materials": "Granite and gold",
+      "features": "Golden roof over sanctum, massive gopurams, cosmic dance hall"
+    },
+    "image_prompt": "Golden sanctum roof of Chidambaram Temple with night sky, cosmic dance pose carved in stone"
+  },
+  {
+    "temple_name": "Ekambareswarar Temple",
+    "location": "Kanchipuram, Tamil Nadu",
+    "deity": "Lord Shiva (Ekambareswarar)",
+    "mythology": "Parvati made a lingam of sand and prayed to Shiva under a mango tree. This temple represents the Earth element.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pallava, Chola, Vijayanagara",
+      "materials": "Granite",
+      "features": "Tallest gopuram in Kanchipuram, mango tree over 3500 years old"
+    },
+    "image_prompt": "Sunlight hitting the towering gopuram of Ekambareswarar Temple with sacred mango tree in foreground"
+  },
+  {
+    "temple_name": "Arunachaleswarar Temple",
+    "location": "Tiruvannamalai, Tamil Nadu",
+    "deity": "Lord Shiva (Arunachaleswarar)",
+    "mythology": "Shiva appeared as a massive column of fire to settle a dispute between Brahma and Vishnu. This represents the Agni (fire) element of the Pancha Bhoota Sthalams.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola and Vijayanagara dynasties",
+      "materials": "Granite",
+      "features": "11-tier Rajagopuram, massive temple tank, circumambulation path around Arunachala hill"
+    },
+    "image_prompt": "Sunset view of Arunachaleswarar Temple with Tiruvannamalai hill in the background, towering gopuram, stone carvings, Dravidian architecture"
+  },
+  {
+    "temple_name": "Ranganathaswamy Temple",
+    "location": "Srirangam, Tamil Nadu",
+    "deity": "Lord Ranganatha (Vishnu reclining)",
+    "mythology": "Lord Rama gifted the idol of Ranganatha to Vibhishana. It was placed on the ground at Srirangam where it became rooted and consecrated.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola, Pandya, Nayak",
+      "materials": "Granite, sandstone",
+      "features": "21 gopurams, massive corridors, 1000-pillared hall, Asia’s largest functioning Hindu temple"
+    },
+    "image_prompt": "Aerial view of Srirangam Ranganathaswamy Temple, multiple gopurams, huge corridors, river island surroundings, temple pond"
+  },
+  {
+    "temple_name": "Koodal Azhagar Temple",
+    "location": "Madurai, Tamil Nadu",
+    "deity": "Lord Vishnu (Koodal Azhagar)",
+    "mythology": "One of the 108 Divya Desams. Vishnu is said to have appeared to sages performing penance and to King Malayadhwaja Pandya.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pandya and Nayak",
+      "materials": "Granite",
+      "features": "Three postures of Vishnu (standing, sitting, reclining), sculpted vimanas"
+    },
+    "image_prompt": "Front view of Koodal Azhagar Temple in Madurai with multi-tier gopuram, intricate sculptures, and temple pond reflection"
+  },
+  {
+    "temple_name": "Kailasanathar Temple",
+    "location": "Kanchipuram, Tamil Nadu",
+    "deity": "Lord Shiva (Kailasanathar)",
+    "mythology": "Built to glorify Lord Shiva as the supreme destroyer and protector. Pallava kings worshipped here for divine guidance.",
+    "architecture": {
+      "style": "Early Dravidian (Pallava)",
+      "era": "8th century CE",
+      "materials": "Sandstone",
+      "features": "Carved mini-shrines, early example of towered sanctum, graceful lion pillars"
+    },
+    "image_prompt": "Kanchipuram Kailasanathar Temple with sandstone carvings, early Dravidian style vimanas, palm trees surrounding it"
+  },
+  {
+    "temple_name": "Jambukeswarar Temple",
+    "location": "Thiruvanaikaval, Tamil Nadu",
+    "deity": "Lord Shiva (Jambukeswarar), Goddess Akilandeswari",
+    "mythology": "Goddess Parvati worshipped Shiva under a Jambu tree; water element temple (Pancha Bhoota – Appu).",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola",
+      "materials": "Granite",
+      "features": "Five prakarams, large temple tank, underground water stream under sanctum"
+    },
+    "image_prompt": "Inner sanctum of Jambukeswarar Temple with priest standing in water, Dravidian gopuram in background"
+  },
+
+  {
+    "temple_name": "Thyagaraja Temple",
+    "location": "Tiruvarur, Tamil Nadu",
+    "deity": "Lord Shiva (Thyagaraja)",
+    "mythology": "Shiva granted the image of Thyagaraja to Muchukunda Chakravarthi. The deity is said to perform the cosmic dance called Ajapa Natanam.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola",
+      "materials": "Granite",
+      "features": "Largest temple chariot in Tamil Nadu, several shrines, massive corridors"
+    },
+    "image_prompt": "Tiruvarur Thyagaraja Temple with majestic chariot, ancient granite structures, and vibrant festival crowd"
+  },
+  {
+    "temple_name": "Meenakshi Amman Temple",
+    "location": "Madurai, Tamil Nadu",
+    "deity": "Goddess Meenakshi and Lord Sundareswarar",
+    "mythology": "Parvati incarnated as Meenakshi and married Shiva in Madurai. The celestial wedding is celebrated as Chithirai Thiruvizha.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pandya and Nayak",
+      "materials": "Granite, sandstone",
+      "features": "12 gopurams, Hall of 1000 pillars, large temple tank"
+    },
+    "image_prompt": "Aerial view of Meenakshi Amman Temple, brightly colored gopurams, night lights, temple pond in center"
+  },
+  {
+    "temple_name": "Annamalaiyar Temple",
+    "location": "Tiruvannamalai, Tamil Nadu",
+    "deity": "Lord Shiva (Annamalaiyar)",
+    "mythology": "Represents the fire (Agni) element of Pancha Bhoota. The hill itself is considered Shiva. Karthigai Deepam is the major festival here.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola, Vijayanagara",
+      "materials": "Granite",
+      "features": "Four gopurams, tallest Eastern gopuram, sacred circumambulation path around the hill"
+    },
+    "image_prompt": "Night view of Annamalaiyar Temple with giant flame atop Arunachala hill, festival lights, and crowd"
+  },
+  {
+    "temple_name": "Srivilliputhur Andal Temple",
+    "location": "Srivilliputhur, Tamil Nadu",
+    "deity": "Goddess Andal and Lord Vishnu (Vadapatrasayi)",
+    "mythology": "Andal, the only female Alvar saint, was found under a tulsi plant and composed devotional hymns before marrying Vishnu.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pandya",
+      "materials": "Granite",
+      "features": "Symbol of TN Government, tall Rajagopuram, Andal sanctum in garden-like setting"
+    },
+    "image_prompt": "Srivilliputhur Andal Temple with gopuram as seen in TN state emblem, temple courtyard and flower decorations"
+  },
+  {
+    "temple_name": "Thillai Nataraja Temple",
+    "location": "Chidambaram, Tamil Nadu",
+    "deity": "Lord Shiva (Nataraja - Cosmic Dancer)",
+    "mythology": "Nataraja performed the Ananda Tandava (Dance of Bliss) defeating the ego of other celestial dancers. Represents space (Akasha).",
+    "architecture": {
+      "style": "Chola and Pandya",
+      "era": "9th century onwards",
+      "materials": "Granite",
+      "features": "Golden roof over sanctum, Chit Sabha, Akasha Linga (invisible Shiva), 108 Bharatanatyam postures"
+    },
+    "image_prompt": "Thillai Nataraja Temple inner sanctum with golden roof, Nataraja idol in dancing pose, dancers performing in front"
+  },
+  {
+    "temple_name": "Swamimalai Murugan Temple",
+    "location": "Swamimalai, Tamil Nadu",
+    "deity": "Lord Murugan (Swaminatha Swamy)",
+    "mythology": "Murugan is believed to have taught the meaning of ‘Om’ to his father Shiva here. One of the Arupadai Veedu (6 abodes of Murugan).",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Early Chola",
+      "materials": "Granite",
+      "features": "60 steps symbolizing Tamil years, sanctum atop hillock, vibrant paintings"
+    },
+    "image_prompt": "Swamimalai Murugan Temple hilltop view with colorful steps, pilgrims climbing, and vivid festival decorations"
+  },
+  {
+    "temple_name": "Nellaiappar Temple",
+    "location": "Tirunelveli, Tamil Nadu",
+    "deity": "Lord Shiva (Nellaiappar) and Goddess Kanthimathi",
+    "mythology": "Shiva manifested as a lingam under a Vanni tree. Temple represents prosperity and agriculture.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pandya and Nayak",
+      "materials": "Granite",
+      "features": "Golden lily tank, musical pillars, temple chariot"
+    },
+    "image_prompt": "Evening view of Nellaiappar Temple with golden pond reflections, musical pillars, and tall gopuram"
+  },
+  {
+    "temple_name": "Kanchi Kamakshi Temple",
+    "location": "Kanchipuram, Tamil Nadu",
+    "deity": "Goddess Kamakshi (Parvati)",
+    "mythology": "Parvati meditated in Kanchi to marry Shiva. She appears seated in yogic posture with Pasha and sugarcane bow.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pallava and Chola",
+      "materials": "Granite",
+      "features": "Golden sanctum roof, Gaja Lakshmi sculptures, single shrine for the Goddess"
+    },
+    "image_prompt": "Kanchi Kamakshi Temple gopuram, lotus-shaped sanctum, golden roof, and decorated inner shrine"
+  },
+  {
+    "temple_name": "Kumbeswarar Temple",
+    "location": "Kumbakonam, Tamil Nadu",
+    "deity": "Lord Shiva (Kumbeswarar)",
+    "mythology": "Shiva is said to have broken a divine pot (Kumbha) filled with nectar during cosmic dissolution, and the pot's fragments formed this temple.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola",
+      "materials": "Granite",
+      "features": "Temple tank (Mahamaham), large gopuram, zodiac-based design"
+    },
+    "image_prompt": "Kumbeswarar Temple tank with pilgrims bathing during Mahamaham, grand gopuram reflecting in water"
+  },
+  {
+    "temple_name": "Murugan Temple",
+    "location": "Palani, Tamil Nadu",
+    "deity": "Lord Murugan (Dandayudhapani Swami)",
+    "mythology": "Murugan renounced worldly pleasures and settled as a renunciant on Palani hill after a dispute over a divine fruit.",
+    "architecture": {
+      "style": "Dravidian with hill temple",
+      "era": "Early Pandya",
+      "materials": "Granite, stone",
+      "features": "500+ hill steps, cable car, idol made of navapashanam (nine herbs)"
+    },
+    "image_prompt": "Hilltop view of Palani Murugan Temple with stairs, winch car, and large crowds during Thaipusam"
+  }
+,
+  {
+    "temple_name": "Thyagaraja Temple",
+    "location": "Tiruvarur, Tamil Nadu",
+    "deity": "Lord Shiva (Thyagaraja)",
+    "mythology": "The temple is believed to be the place where Lord Vishnu gifted the Thyagaraja idol to Shiva. It is famous for the dance of Thyagaraja.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola dynasty",
+      "materials": "Granite",
+      "features": "Massive chariot, large temple tank, numerous shrines within vast premises"
+    },
+    "image_prompt": "Tiruvarur Thyagaraja Temple with huge wooden chariot, detailed carvings, surrounded by water tank and greenery"
+  },
+  {
+    "temple_name": "Thillai Kali Amman Temple",
+    "location": "Chidambaram, Tamil Nadu",
+    "deity": "Goddess Kali",
+    "mythology": "After losing a dance contest to Lord Shiva, Kali took residence outside the main temple town.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola and later dynasties",
+      "materials": "Granite",
+      "features": "Open courtyard, fierce deity image, peaceful sanctum"
+    },
+    "image_prompt": "Thillai Kali Amman Temple with fierce black stone idol, flower offerings, and red cloth decorations"
+  },
+  {
+    "temple_name": "Vadapalani Murugan Temple",
+    "location": "Chennai, Tamil Nadu",
+    "deity": "Lord Murugan",
+    "mythology": "Built in honor of Lord Murugan who is believed to fulfill the wishes of devotees quickly.",
+    "architecture": {
+      "style": "Contemporary Dravidian",
+      "era": "1890s onwards",
+      "materials": "Brick, cement, granite",
+      "features": "Colorful gopuram, depictions of Murugan legends"
+    },
+    "image_prompt": "Vadapalani Murugan Temple gopuram with vivid Murugan statues, bright colors, and bustling devotees"
+  },
+  {
+    "temple_name": "Annamalaiyar Temple",
+    "location": "Tiruvannamalai, Tamil Nadu",
+    "deity": "Lord Shiva (Annamalaiyar)",
+    "mythology": "Shiva manifested as fire on Arunachala Hill. The temple marks the center of the Karthigai Deepam festival.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola to Vijayanagara",
+      "materials": "Granite",
+      "features": "Tall gopurams, Deepam cauldron on hilltop, circumambulation path"
+    },
+    "image_prompt": "Annamalaiyar Temple at dusk with illuminated gopuram and fire on Arunachala hill in background"
+  },
+  {
+    "temple_name": "Srivilliputhur Andal Temple",
+    "location": "Srivilliputhur, Tamil Nadu",
+    "deity": "Goddess Andal and Lord Vishnu",
+    "mythology": "Andal, an incarnation of Bhudevi, was found in a tulsi garden and later merged with Lord Ranganatha.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Pandya and Nayak",
+      "materials": "Granite",
+      "features": "Iconic gopuram used in TN Govt emblem, sculptures of Andal’s life"
+    },
+    "image_prompt": "Srivilliputhur Temple tower with Tamil Nadu emblem resemblance, blue sky, flower-laden entrance"
+  },
+  {
+    "temple_name": "Kumbeswarar Temple",
+    "location": "Kumbakonam, Tamil Nadu",
+    "deity": "Lord Shiva (Kumbeswarar)",
+    "mythology": "Shiva is believed to have formed from the sacred pot (Kumbha) during the cosmic deluge.",
+    "architecture": {
+      "style": "Chola and Nayak",
+      "era": "7th century CE",
+      "materials": "Granite",
+      "features": "Five-tier gopuram, Mahamaham tank nearby, intricate sculptures"
+    },
+    "image_prompt": "Kumbeswarar Temple gopuram with pilgrims, stone corridors, and tankside lamps"
+  },
+  {
+    "temple_name": "Vaitheeswaran Koil",
+    "location": "Mayiladuthurai, Tamil Nadu",
+    "deity": "Lord Shiva as Vaitheeswaran (God of healing)",
+    "mythology": "Shiva healed devotees suffering from diseases; associated with Siddha medicine and astrology (Nadi readings).",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola",
+      "materials": "Granite",
+      "features": "Sacred tank with medicinal waters, shrine of Dhanvantari"
+    },
+    "image_prompt": "Vaitheeswaran Temple tank with reflection, incense smoke, and healing rituals"
+  },
+  {
+    "temple_name": "Swamimalai Murugan Temple",
+    "location": "Swamimalai, Tamil Nadu",
+    "deity": "Lord Murugan",
+    "mythology": "Murugan explained the meaning of Pranava (Om) to his father Shiva at this site.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola",
+      "materials": "Granite",
+      "features": "60-step staircase, hilltop sanctum, pillar sculptures"
+    },
+    "image_prompt": "Swamimalai Temple on hill with staircase, lamps on steps, devotees climbing at dawn"
+  },
+  {
+    "temple_name": "Chidambaram Nataraja Temple",
+    "location": "Chidambaram, Tamil Nadu",
+    "deity": "Lord Shiva (Nataraja)",
+    "mythology": "Symbolizes the cosmic dance of Lord Shiva. Site of Chidambara Rahasya – the formless space deity.",
+    "architecture": {
+      "style": "Dravidian",
+      "era": "Chola and Pandya",
+      "materials": "Granite",
+      "features": "Golden roof over sanctum, Nataraja idol, cosmic dance postures"
+    },
+    "image_prompt": "Golden-roofed sanctum of Chidambaram Temple, Nataraja sculpture, mystic ambience"
+  },
+  {
+    "temple_name": "Rockfort Ucchi Pillayar Temple",
+    "location": "Tiruchirappalli, Tamil Nadu",
+    "deity": "Lord Ganesha",
+    "mythology": "Ganesha ran away with the Atmalinga to this hilltop, evading Ravana. The temple sits atop a massive rock.",
+    "architecture": {
+      "style": "Rock-cut",
+      "era": "Pallava and Nayak",
+      "materials": "Granite rock",
+      "features": "344 steps carved into rock, panoramic view of Trichy city"
+    },
+    "image_prompt": "Rockfort temple atop giant rock with stairs, Trichy city in the background, sunset light"
+  }
+]
