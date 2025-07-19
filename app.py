@@ -9,20 +9,30 @@ st.set_page_config(page_title="TempleGPT 🛕", page_icon="🛕", layout="wide")
 st.title("TempleGPT 🛕")
 st.markdown("Ask about Tamil Nadu temples: architecture, builders, mythology, and more.")
 
+# Load all temples once
+all_temples_by_location = get_temples_by_location("All")
+all_temples_by_dynasty = get_temples_by_dynasty("All")
+
+# Unique locations and dynasties for dropdowns
+unique_locations = sorted(list(set([t['location'] for t in all_temples_by_location])))
+unique_dynasties = sorted(list(set([t['architecture']['dynasty'] for t in all_temples_by_dynasty])))
+
 # Sidebar - Location and Dynasty Filters
 st.sidebar.header("📍 Temple Assessment")
-selected_location = st.sidebar.selectbox("Temple Location", get_temples_by_location())
-selected_dynasty = st.sidebar.selectbox("Built Dynasty", get_temples_by_dynasty())
+selected_location = st.sidebar.selectbox("Temple Location", ["All"] + unique_locations)
+selected_dynasty = st.sidebar.selectbox("Built Dynasty", ["All"] + unique_dynasties)
 
 st.sidebar.markdown("---")
 st.sidebar.subheader("Temples in this Location")
-for temple in get_temples_by_location(selected_location):
-    st.sidebar.write(f"- {temple}")
+filtered_by_location = get_temples_by_location(selected_location)
+for temple in filtered_by_location:
+    st.sidebar.write(f"🛕 {temple['temple_name']}")
 
 st.sidebar.markdown("---")
 st.sidebar.subheader("Temples by this Dynasty")
-for temple in get_temples_by_dynasty(selected_dynasty):
-    st.sidebar.write(f"- {temple}")
+filtered_by_dynasty = get_temples_by_dynasty(selected_dynasty)
+for temple in filtered_by_dynasty:
+    st.sidebar.write(f"🏛️ {temple['temple_name']}")
 
 # Main Query Interface
 query = st.text_input("Ask your question")
@@ -32,10 +42,10 @@ if st.button("Ask TempleGPT"):
         with st.spinner("TempleGPT is thinking..."):
             response = get_specific_temple_info(query)
         st.success("TempleGPT says:")
-        st.write(response["answer"])
+        st.write(response)
 
-        # Show image if available
-        if response.get("image_url"):
-            st.image(response["image_url"], caption="AI-generated image", use_column_width=True)
+        # Optional: Auto-generate image using prompt (if you have a local/gen API or placeholder)
+        if "temple_name" in query.lower():
+            st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Big_Temple_Thanjavur.jpg/1280px-Big_Temple_Thanjavur.jpg", caption="Sample temple image", use_column_width=True)
     else:
         st.warning("Please enter a question.")
