@@ -1,34 +1,30 @@
-import json
-from sentence_transformers import SentenceTransformer
 from langchain_community.vectorstores import FAISS
-
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.document_loaders import TextLoader
+from langchain.docstore.document import Document
+import json
 
 def load_vectorstore():
-    with open("temple.json", "r", encoding="utf-8") as f:
-        temples = json.load(f)
+    with open("temple.json", "r", encoding="utf-8") as file:
+        temple_data = json.load(file)
 
+    # Prepare list of strings from the JSON
     data = []
-    for temple in temples:
-        name = temple.get("temple_name", "Unknown Temple")
-        location = temple.get("location", "Unknown Location")
-        deity = temple.get("deity", "Unknown Deity")
-        mythology = temple.get("mythology", "No mythology available")
-        
-        arch = temple.get("architecture", {})
-        style = arch.get("style", "Unknown style")
-        era = arch.get("era", "Unknown era")
-        materials = arch.get("materials", "Unknown materials")
-        features = arch.get("features", "No architectural features")
+    for temple in temple_data:
+        content = f"""
+        Temple Name: {temple['temple_name']}
+        Location: {temple['location']}
+        Deity: {temple['deity']}
+        Mythology: {temple['mythology']}
+        Architecture Style: {temple['architecture']['style']}
+        Architecture Features: {temple['architecture']['features']}
+        """
+        data.append(content.strip())
 
-        content = (
-            f"{name}, located at {location}, is dedicated to {deity}. "
-            f"Mythology: {mythology}. "
-            f"Architecture: Style - {style}, Era - {era}, Materials - {materials}, Features - {features}."
-        )
+    # Use LangChain's HuggingFaceEmbeddings wrapper
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
-        data.append(content)
-
-    embeddings = SentenceTransformer("all-MiniLM-L6-v2")
-    model = FAISS.from_texts(data, embeddings)
+    # Create FAISS index
+    model = FAISS.from_texts(data, embedding=embeddings)
 
     return data, embeddings, model
