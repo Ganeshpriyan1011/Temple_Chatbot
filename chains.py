@@ -1,42 +1,68 @@
 import json
+import difflib
 
-# Load the data once
-with open("temple.json", "r", encoding="utf-8") as file:
-    temples = json.load(file)
+# Load temple data
+with open("temple.json", "r", encoding="utf-8") as f:
+    temple_data = json.load(f)
 
-# Extract unique values for assessments
-def get_all_temples():
-    return temples
-
-def get_all_locations():
-    return sorted(set(t["location"] for t in temples))
-
-def get_all_eras():
-    return sorted(set(t["architecture"]["era"] for t in temples))
-
-def get_all_deities():
-    return sorted(set(t["deity"] for t in temples))
-
-# Filter temples by specific criteria
-def get_temples_by_location(location):
-    return [t["temple_name"] for t in temples if t["location"] == location]
-
-def get_temples_by_era(era):
-    return [t["temple_name"] for t in temples if t["architecture"]["era"] == era]
-
-def get_temples_by_deity(deity):
-    return [t["temple_name"] for t in temples if t["deity"] == deity]
-
-# Main query function
 def get_specific_temple_info(query):
-    for temple in temples:
-        if query.lower() in temple["temple_name"].lower() or query.lower() in temple.get("mythology", "").lower():
-            return {
-                "answer": f"**{temple['temple_name']}**, located in *{temple['location']}*, is dedicated to **{temple['deity']}**. It was built during the **{temple['architecture']['era']}** era in **{temple['architecture']['style']}** style. Key features include: {temple['architecture']['features']}. Mythology: {temple['mythology']}",
-                "image_url": generate_image_url(temple["image_prompt"])
-            }
-    return {"answer": "Sorry, I couldn't find any matching temple in the database."}
+    query = query.lower()
+    best_match = None
+    best_score = 0
 
-# Dummy image function (you can replace this with real image generation later)
-def generate_image_url(prompt):
-    return "https://via.placeholder.com/600x400.png?text=" + prompt.replace(" ", "+")
+    for temple in temple_data:
+        score = 0
+        combined_text = " ".join([
+            temple["temple_name"],
+            temple["location"],
+            temple["deity"],
+            temple["mythology"],
+            temple["architecture"]["style"],
+            temple["architecture"]["era"],
+            temple["architecture"]["materials"],
+            temple["architecture"]["features"]
+        ]).lower()
+
+        matches = difflib.SequenceMatcher(None, query, combined_text).ratio()
+        if matches > best_score:
+            best_score = matches
+            best_match = temple
+
+    if best_score > 0.3:
+        answer = f"**Temple Name:** {best_match['temple_name']}\n\n"
+        answer += f"**Location:** {best_match['location']}\n"
+        answer += f"**Deity:** {best_match['deity']}\n"
+        answer += f"**Mythology:** {best_match['mythology']}\n\n"
+        answer += "**Architecture:**\n"
+        answer += f"- Style: {best_match['architecture']['style']}\n"
+        answer += f"- Era: {best_match['architecture']['era']}\n"
+        answer += f"- Materials: {best_match['architecture']['materials']}\n"
+        answer += f"- Features: {best_match['architecture']['features']}\n"
+
+        return {
+            "answer": answer,
+            "image_url": None  # You can add image generation later
+        }
+    else:
+        return {
+            "answer": "Sorry, I couldn't find any matching temple in the database.",
+            "image_url": None
+        }
+
+def get_temples_by_location(selected_location=None):
+    if not selected_location:
+        locations = sorted(list(set(t["location"] for t in temple_data)))
+        return locations
+    return [t["temple_name"] for t in temple_data if t["location"] == selected_location]
+
+def get_temples_by_dynasty(selected_dynasty=None):
+    if not selected_dynasty:
+        eras = sorted(list(set(t["architecture"]["era"] for t in temple_data)))
+        return eras
+    return [t["temple_name"] for t in temple_data if t["architecture"]["era"] == selected_dynasty]
+
+def get_temples_by_deity(selected_deity=None):
+    if not selected_deity:
+        deities = sorted(list(set(t["deity"] for t in temple_data)))
+        return deities
+    return [t["temple_name"] for t in temple_data if t["deity"] == selected_deity]
