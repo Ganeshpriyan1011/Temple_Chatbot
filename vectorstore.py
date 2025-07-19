@@ -1,27 +1,19 @@
+import os
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-import os
-
-INDEX_FILE = "faiss_index.npy"
-META_FILE = "temples.json"
-
-
-def build_vectorstore():
-    model = SentenceTransformer('all-MiniLM-L6-v2')
-    with open(META_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    texts = [x['mythology'] + ' ' + x['architecture'] for x in data]
-    vectors = model.encode(texts)
-    np.save(INDEX_FILE, vectors)
-    print("✅ Vectorstore built and saved.")
-
-
 def load_vectorstore():
-    with open(META_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    data = []
+    embeddings = []
 
-    vectors = np.load(INDEX_FILE)
-    return data, vectors
+    for filename in os.listdir("temples"):
+        if filename.endswith(".json"):
+            with open(os.path.join("temples", filename), "r", encoding="utf-8") as f:
+                temple = json.load(f)
+                content = f"{temple['name']} {temple['mythology']} {temple['architecture']}"
+                data.append(temple)
+                embeddings.append(model.encode(content))
+
+    return data, np.array(embeddings), model
