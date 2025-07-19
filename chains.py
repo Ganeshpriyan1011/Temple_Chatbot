@@ -1,7 +1,7 @@
 import json
 
 # Load the temple JSON dataset
-with open("temples.json", "r", encoding="utf-8") as file:
+with open("temple.json", "r", encoding="utf-8") as file:
     temple_data = json.load(file)
 
 # Add image URL dynamically if not already present
