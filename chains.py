@@ -1,15 +1,8 @@
 import json
-import hashlib
 
 # Load temple dataset
-with open("temple.json", "r", encoding="utf-8") as file:
+with open("temples.json", "r", encoding="utf-8") as file:
     temple_data = json.load(file)
-
-# 🔧 Generate a consistent image URL per temple using hash
-def get_image_url(temple_name):
-    hash_sig = hashlib.md5(temple_name.encode()).hexdigest()
-    clean_name = temple_name.lower().replace(" ", "+")
-    return f"https://source.unsplash.com/600x400/?{clean_name}+temple&sig={hash_sig}"
 
 # 📌 Temple Q&A
 def get_specific_temple_info(query):
@@ -20,8 +13,7 @@ def get_specific_temple_info(query):
                 "location": temple["location"],
                 "deity": temple["deity"],
                 "mythology": temple["mythology"],
-                "architecture": temple["architecture"],
-                "image_url": get_image_url(temple["temple_name"])
+                "architecture": temple["architecture"]
             }
     return None
 
