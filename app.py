@@ -12,7 +12,6 @@ if st.button("Search Temple Info"):
     response = get_specific_temple_info(user_input)
     if response:
         st.subheader(response["temple_name"])
-        st.image(response["image_url"], caption=response["temple_name"], use_column_width=True)
         st.markdown(f"**Location**: {response['location']}")
         st.markdown(f"**Deity**: {response['deity']}")
         st.markdown(f"**Mythology**: {response['mythology']}")
@@ -27,7 +26,7 @@ if st.button("Search Temple Info"):
 
 st.markdown("---")
 
-# 📍 Location / Era / Deity in Sidebar
+# 📍 Sidebar for Location / Era / Deity
 with st.sidebar:
     st.header("📍 Explore Temples")
 
