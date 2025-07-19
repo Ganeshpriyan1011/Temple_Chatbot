@@ -1,44 +1,42 @@
 import json
 
-# Load data from JSON
-def load_temple_data():
-    with open("temple_data.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
-    return data
+# Load the data once
+with open("temple.json", "r", encoding="utf-8") as file:
+    temples = json.load(file)
 
+# Extract unique values for assessments
+def get_all_temples():
+    return temples
 
-# Get unique temple locations
-def get_temples_by_location(data):
-    locations = sorted(list(set([t["location"]["district"] for t in data if "location" in t and "district" in t["location"]])))
-    return locations
+def get_all_locations():
+    return sorted(set(t["location"] for t in temples))
 
+def get_all_eras():
+    return sorted(set(t["architecture"]["era"] for t in temples))
 
-# Get unique temple dynasties (based on architecture era)
-def get_temples_by_dynasty(data):
-    dynasties = sorted(list(set([t["architecture"]["era"] for t in data if "architecture" in t and "era" in t["architecture"]])))
-    return dynasties
+def get_all_deities():
+    return sorted(set(t["deity"] for t in temples))
 
+# Filter temples by specific criteria
+def get_temples_by_location(location):
+    return [t["temple_name"] for t in temples if t["location"] == location]
 
-# Filter temples by a selected location
-def filter_temples_by_location(data, selected_location):
-    return [t["name"] for t in data if t.get("location", {}).get("district") == selected_location]
+def get_temples_by_era(era):
+    return [t["temple_name"] for t in temples if t["architecture"]["era"] == era]
 
+def get_temples_by_deity(deity):
+    return [t["temple_name"] for t in temples if t["deity"] == deity]
 
-# Filter temples by a selected dynasty (era)
-def filter_temples_by_dynasty(data, selected_dynasty):
-    return [t["name"] for t in data if t.get("architecture", {}).get("era") == selected_dynasty]
-
-
-# Process user queries
+# Main query function
 def get_specific_temple_info(query):
-    # You can replace this with LangChain or vector search logic later
-    if "meenakshi" in query.lower():
-        return {
-            "answer": "The Meenakshi Temple was built by the Pandya dynasty and is located in Madurai. It is renowned for its Dravidian architecture and mythological association with Goddess Meenakshi and Lord Sundareswarar.",
-            "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Meenakshi_Amman_Temple.jpg"
-        }
-    else:
-        return {
-            "answer": "Sorry, I couldn't find any matching temple in the database.",
-            "image_url": None
-        }
+    for temple in temples:
+        if query.lower() in temple["temple_name"].lower() or query.lower() in temple.get("mythology", "").lower():
+            return {
+                "answer": f"**{temple['temple_name']}**, located in *{temple['location']}*, is dedicated to **{temple['deity']}**. It was built during the **{temple['architecture']['era']}** era in **{temple['architecture']['style']}** style. Key features include: {temple['architecture']['features']}. Mythology: {temple['mythology']}",
+                "image_url": generate_image_url(temple["image_prompt"])
+            }
+    return {"answer": "Sorry, I couldn't find any matching temple in the database."}
+
+# Dummy image function (you can replace this with real image generation later)
+def generate_image_url(prompt):
+    return "https://via.placeholder.com/600x400.png?text=" + prompt.replace(" ", "+")
