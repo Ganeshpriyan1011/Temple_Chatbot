@@ -1,18 +1,14 @@
 from vectorstore import load_vectorstore
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
 
 def generate_answer(query):
-    data, embeddings, model = load_vectorstore()
-    query_embedding = model.encode([query])
-    scores = cosine_similarity(query_embedding, embeddings)[0]
+    data, embeddings, faiss_index = load_vectorstore()
 
-    best_idx = np.argmax(scores)
-    best_match = data[best_idx]
+    # Search similar entries
+    results = faiss_index.similarity_search(query, k=3)
 
-    return f"""
-    📍 **Temple Name**: {best_match['name']}
-    🗺️ **Location**: {best_match['location']}
-    🕉️ **Mythology**: {best_match['mythology']}
-    🏛️ **Architecture**: {best_match['architecture']}
-    """
+    if results:
+        response = "\n\n".join([doc.page_content for doc in results])
+    else:
+        response = "Sorry, I couldn't find information related to your query."
+
+    return response
