@@ -1,6 +1,7 @@
 import json
 from sentence_transformers import SentenceTransformer
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
+
 
 def load_vectorstore():
     with open("temple.json", "r", encoding="utf-8") as f:
